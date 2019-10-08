@@ -224,7 +224,7 @@ server.post('/hello', function create(req, res, next) {
 server.put('/hello', send);
 server.get('/hello/:name', send);
 server.head('/hello/:name', send);
-server.del('hello/:name', function rm(req, res, next) {
+server.del('/hello/:name', function rm(req, res, next) {
   res.send(204);
   return next();
 });
